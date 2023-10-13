@@ -5,3 +5,11 @@ module_bmcoder.bmcoderlist:
     _title: 'My first page in D10'
   requirements:
     _permission: 'access content'
+
+module_bmcoder.api_config:
+  path: '/admin/config/system/api-config'
+  defaults:
+    _title: 'API Credentials'
+    _form: 'Drupal\module_bmcoder\Form\APIConfigform'
+  requirements:
+    _permission: 'administer site configuration'
