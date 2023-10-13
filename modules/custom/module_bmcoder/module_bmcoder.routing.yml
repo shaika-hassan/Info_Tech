@@ -1,0 +1,7 @@
+module_bmcoder.bmcoderlist:
+  path: 'mylist'
+  defaults:
+    _controller: '\Drupal\module_bmcoder\Controller\BmcoderController::bmcoderList'
+    _title: 'My first page in D10'
+  requirements:
+    _permission: 'access content'
