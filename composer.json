@@ -24,6 +24,7 @@
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/feeds": "^3.0@beta",
         "drupal/paragraphs": "^1.16",
+        "drupal/token": "^1.12",
         "drush/drush": "^12.2"
     },
     "conflict": {
