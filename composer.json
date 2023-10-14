@@ -22,6 +22,7 @@
         "drupal/core-recommended": "^10.1",
         "drupal/core-vendor-hardening": "^10.1",
         "drupal/entity_reference_revisions": "^1.10",
+        "drupal/feeds": "^3.0@beta",
         "drupal/paragraphs": "^1.16",
         "drush/drush": "^12.2"
     },
