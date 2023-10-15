@@ -21,10 +21,14 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/core-vendor-hardening": "^10.1",
+        "drupal/devel": "^5.1",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/feeds": "^3.0@beta",
         "drupal/paragraphs": "^1.16",
         "drupal/token": "^1.12",
+        "drupal/tracer": "^1.0",
+        "drupal/vani": "^10.0",
+        "drupal/webprofiler": "^10.1",
         "drush/drush": "^12.2"
     },
     "conflict": {
