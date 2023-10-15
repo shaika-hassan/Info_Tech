@@ -1,0 +1,6 @@
+name: 'Dino Roar'
+type: module
+description: 'A custom Drupal service for Dino Roar.'
+core_version_requirement: ^10
+package: Custom
+version: 1.0
