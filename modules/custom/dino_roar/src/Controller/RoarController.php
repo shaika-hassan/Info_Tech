@@ -3,8 +3,9 @@
 namespace Drupal\dino_roar\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\dino_roar\Service\RoarGenerator;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 class RoarController extends ControllerBase {
   protected $roarGenerator;
@@ -19,9 +20,8 @@ class RoarController extends ControllerBase {
     );
   }
 
-  public function content() {
-    return [
-      '#markup' => $this->roarGenerator->generateRoar(),
-    ];
+  public function roar($count = 5) {
+    $roar = $this->roarGenerator->getRoar($count);
+    return new Response($roar);
   }
 }

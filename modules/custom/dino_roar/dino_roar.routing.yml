@@ -1,0 +1,7 @@
+dino_roar.content:
+  path: 'dino-roar'
+  defaults:
+    _controller: '\Drupal\dino_roar\Controller\RoarController::roar'
+    _title: 'Dino Roar'
+  requirements:
+    _permission: 'access content'
