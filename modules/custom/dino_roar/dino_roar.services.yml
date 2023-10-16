@@ -4,3 +4,10 @@ services:
 
   dino_roar.logger:
     class: Psr\Log\LoggerInterface
+
+
+  dino_roar.dino_listener:
+    class: Drupal\dino_roar\services\DinoListener
+    arguments: []
+    tags:
+      - { name: event_subscriber }
