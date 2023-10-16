@@ -9,8 +9,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class RoarController extends ControllerBase {
-  protected $roarGenerator;
-  protected $loggerFactory;
+  private $roarGenerator;
+  public $loggerFactory;
 
   public function __construct(RoarGenerator $roarGenerator, LoggerChannelFactoryInterface $loggerFactory) {
     $this->roarGenerator = $roarGenerator;
@@ -30,6 +30,9 @@ class RoarController extends ControllerBase {
     $this->loggerFactory->get('default')
          ->debug($roar);
 
-    return new Response($roar);
+    //return new Response($roar);
+    return[
+               '#title'=>$roar
+    ];
   }
 }
