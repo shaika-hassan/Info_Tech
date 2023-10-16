@@ -7,7 +7,7 @@ services:
 
 
   dino_roar.dino_listener:
-    class: Drupal\dino_roar\services\DinoListener
+    class: Drupal\dino_roar\Service\DinoListener
     arguments: []
     tags:
       - { name: event_subscriber }
