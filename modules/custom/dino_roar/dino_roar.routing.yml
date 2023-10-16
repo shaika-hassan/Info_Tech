@@ -5,3 +5,5 @@ dino_roar.content:
     _title: 'Dino Roar'
   requirements:
     _permission: 'access content'
+  options:
+    _admin_route: FALSE
