@@ -25,8 +25,10 @@
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/feeds": "^3.0@beta",
         "drupal/paragraphs": "^1.16",
+        "drupal/queue_ui": "^3.1",
         "drupal/token": "^1.12",
         "drupal/tracer": "^1.0",
+        "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/vani": "^10.0",
         "drupal/webprofiler": "^10.1",
         "drush/drush": "^12.2"

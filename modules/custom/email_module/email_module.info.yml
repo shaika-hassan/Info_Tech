@@ -1,0 +1,7 @@
+name: 'Email Module'
+type: module
+description: 'Sends a welcome email to registered users.'
+core_version_requirement: ^8 || ^9  ||  ^10
+package: Custom
+version: 1.0
+project: 'custom'

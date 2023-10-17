@@ -1,0 +1,15 @@
+email_module.welcome:
+  path: 'email/welcome'
+  defaults:
+    _controller: 'Drupal\email_module\Controller\EmailModuleController::welcome'
+    _title: 'Send Welcome Email'
+  requirements:
+    _permission: 'administer site configuration'
+email_module.add_user_form:
+  path: 'admin/email_module/add-user'
+  defaults:
+    _form: 'Drupal\email_module\Form\EmailModuleForm'
+    _title: 'Add User to Queue'
+  requirements:
+    _permission: 'administer site configuration'
+

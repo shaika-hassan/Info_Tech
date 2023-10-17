@@ -1,0 +1,65 @@
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_cron_queue_info().
+ */
+function email_module_cron_queue_info() {
+  $queues = [];
+
+  // Define the name of the queue.
+  $queues['email_welcome'] = [
+    'worker callback' => 'email_module_send_welcome_email',
+    'time' => 15, // Adjust the time interval as needed.
+  ];
+
+  return $queues;
+}
+
+/**
+ * Implements hook_user_insert().
+ */
+function email_module_user_insert(User $account) {
+  // Add the user ID to the email_welcome queue when a user registers.
+  \Drupal::queue('email_welcome')->createItem($account->id());
+}
+
+/**
+ * Worker callback to send the welcome email.
+ */
+function email_module_send_welcome_email($data) {
+  // Load the user entity based on the provided user ID.
+  $user = User::load($data);
+
+  if ($user) {
+    // Send a welcome email to the user's email address.
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $module = 'email_module'; // Your module's name
+    $key = 'welcome_email';  // A key to identify the email template
+
+    $params = [
+      'user' => $user,
+    ];
+
+    // You can define the sender, subject, and other email details.
+    $message = [
+      'to' => $user->getEmail(),
+      'subject' => t('Welcome to Our Site'),
+      'body' => [], // Email body, you can customize this.
+    ];
+
+    // Send the email.
+    $mailManager->mail($module, $key, $user->getEmail(), NULL, $params, NULL, TRUE, $message);
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function email_module_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'welcome_email':
+      $message['subject'] = t('Welcome to Our Site');
+      $message['body'][] = t('Hello @user, welcome to our site.', ['@user' => $params['user']->getDisplayName()]);
+      break;
+  }
+}
