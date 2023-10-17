@@ -1,0 +1,7 @@
+name: 'Custom Filter'
+type: module
+description: 'Auto-capitalizes pre-configured words in filtered text.'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10
+version: 1.0
+project: 'custom_filter'
