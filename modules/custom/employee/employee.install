@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function employee_schema() {
+  $schema = [];
+
+  // Define the employee information table.
+  $schema['employee'] = [
+    'description' => 'Stores employee information',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'first_name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'last_name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'zipcode' => [
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function employee_install() {
+  // Create the employee table.
+  drupal_install_schema('employee');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function employee_uninstall() {
+  // Remove the employee table.
+  //\Drupal::database()->schema()->dropTable('employee_info');
+  \Drupal::service('database')->schema()->dropTable('employee');
+}
+
