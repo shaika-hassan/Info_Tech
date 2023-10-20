@@ -12,49 +12,38 @@ function employee_schema() {
     'fields' => [
       'id' => [
         'type' => 'serial',
-        'not null' => TRUE,
+        'description' => 'holds the id',
+        'not null' => true,
+        'unsigned'=>true,
       ],
       'first_name' => [
+        'description' => 'firstname',
         'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
+        'length' => 50,
+        'not null' => true,
       ],
       'last_name' => [
+        'description' => 'lastname',
         'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
+        'length' => 50,
+        'not null' => true,
       ],
       'email' => [
+        'description' => 'user email id',
         'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
+        'length' => 50,
+        'not null' => true,
       ],
       'zipcode' => [
+        'description' => 'zipcode',
         'type' => 'varchar',
-        'length' => 10,
-        'not null' => TRUE,
+        'length' => 6,
+        'not null' => true,
       ],
     ],
     'primary key' => ['id'],
   ];
 
   return $schema;
-}
-
-/**
- * Implements hook_install().
- */
-function employee_install() {
-  // Create the employee table.
-  drupal_install_schema('employee');
-}
-
-/**
- * Implements hook_uninstall().
- */
-function employee_uninstall() {
-  // Remove the employee table.
-  //\Drupal::database()->schema()->dropTable('employee_info');
-  \Drupal::service('database')->schema()->dropTable('employee');
 }
 
