@@ -1,0 +1,17 @@
+css-library:
+  version: 1.0
+  css:
+    theme:
+      css/employee.css: {}
+
+js-library:
+  version: 1.0
+  js:
+    js/employee.js: {}
+
+table-styling:
+  version: 1.0
+  css:
+    theme:
+      css/table-styling.css: {}
+

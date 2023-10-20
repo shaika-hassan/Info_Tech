@@ -15,6 +15,8 @@ class EmployeeCustomBlock extends BlockBase {
 
   public function build() {
     $form = \Drupal::formBuilder()->getForm('Drupal\employee\Form\EmployeeForm');
+    $form['#attached']['library'][] = 'employee/js-library';
+    $form['#attached']['library'][] = 'employee/css-library';
     return $form;
   }
   }

@@ -1,17 +1,8 @@
-/* css/table-styling.css */
+/* css/employee.css (or your custom CSS file path) */
 
-/* Add your CSS styles for table elements here */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
+/* Change the color of the custom "Save" button */
+.custom-save-button {
+  background-color: red  !important; /* Change the background color to red */
+  color: white  !important; /* Change the text color to white */
+  /* Add any other CSS styles you need for the button */
 }
