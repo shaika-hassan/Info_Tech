@@ -8,10 +8,15 @@ js-library:
   version: 1.0
   js:
     js/employee.js: {}
+    dependencies:
+      - core/jquery
+      - core/drupalSettings
+
 
 table-styling:
   version: 1.0
   css:
     theme:
       css/table-styling.css: {}
+
 

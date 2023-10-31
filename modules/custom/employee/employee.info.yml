@@ -1,5 +1,12 @@
 name: employee
 type: module
-description: This module saves employee data in database
-package : Custom
+description: 'This module saves employee data in the database'
+package: Custom
 core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:core
+version: 1.0
+libraries:
+  - employee/css-library
+  - employee/js-library
+  - employee/table-styling

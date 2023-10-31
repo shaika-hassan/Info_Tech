@@ -9,8 +9,7 @@
  * Implements hook_page_attachments().
  */
 function employee_page_attachments(array &$attachments) {
-  if (\Drupal::currentUser()->isAuthenticated()) {
-    $attachments['#attached']['library'][] = 'employee/js-library';
-    $attachments['#attached']['library'][] = 'employee/css-library';
-  }
+  $attachments['#attached']['library'][] = 'employee/css-library';  
+  $attachments['#attached']['library'][] = 'employee/js-library';
+    
 }
