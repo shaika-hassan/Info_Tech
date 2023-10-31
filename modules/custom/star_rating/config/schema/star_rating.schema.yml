@@ -1,0 +1,7 @@
+field.formatter.star_rating.decimal:
+  type: mapping
+  label: 'Star Rating Field Formatter settings for Decimal field'
+  mapping:
+    size:
+      type: string
+      label: 'Size'
