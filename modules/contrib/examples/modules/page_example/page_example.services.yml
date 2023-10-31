@@ -1,0 +1,6 @@
+services:
+  page_example.simple_page_load_subscriber:
+    class: Drupal\page_example\EventSubscriber\SimplePageLoadEventSubscriber
+    tags:
+      - { name: event_subscriber }
+
