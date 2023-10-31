@@ -1,0 +1,7 @@
+name: custom block
+type: module
+description: 'creating an custom block programmatically'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:block

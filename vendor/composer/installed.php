@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '62fb7e68f60d40c72c0c89b574f247f2ef8b8852',
+        'reference' => '60d08d658f98caacfd60a09f4ef06c48ebf62356',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -406,6 +406,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/examples' => array(
+            'pretty_version' => '4.0.2',
+            'version' => '4.0.2.0',
+            'reference' => '4.0.2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/examples',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/feeds' => array(
             'pretty_version' => '3.0.0-beta4',
             'version' => '3.0.0.0-beta4',
@@ -418,7 +427,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '62fb7e68f60d40c72c0c89b574f247f2ef8b8852',
+            'reference' => '60d08d658f98caacfd60a09f4ef06c48ebf62356',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
