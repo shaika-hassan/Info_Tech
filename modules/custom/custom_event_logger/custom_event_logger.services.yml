@@ -1,0 +1,11 @@
+services:
+  custom_event_logger.event_subscriber:
+    class: Drupal\custom_event_logger\EventSubscriber\CustomEventLoggerSubscriber
+    arguments: ['@database', '@logger.factory']
+    tags:
+      - { name: event_subscriber }
+
+  custom_event_logger.database:
+    class: Drupal\Core\Database\Connection
+    factory: 'Drupal\Core\Database\Database::getConnection'
+    arguments: ['default']

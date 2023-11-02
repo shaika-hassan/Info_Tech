@@ -1,0 +1,15 @@
+<?php
+
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\EventDispatcher\GenericEvent;
+
+/**
+ * Implements hook_help().
+ */
+function custom_event_logger_help($route_name, RouteMatchInterface $route_name) {
+  switch ($route_name) {
+    case 'help.page.custom_event_logger':
+      return '<p>' . t('Logs "Simple Page Loaded" message when the "simple_page_load" event is triggered.') . '</p>';
+  }
+}
+

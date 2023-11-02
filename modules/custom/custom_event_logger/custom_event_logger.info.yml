@@ -1,0 +1,7 @@
+name: 'Custom Event Logger'
+type: module
+description: 'Logs "Simple Page Loaded" message when the "simple_page_load" event is triggered.'
+core_version_requirement: ^9.4 || ^10
+package: Custom
+dependencies:
+  - drupal:page_example
